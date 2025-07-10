@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Bobby Earth</title>
+    <style>
+      body { margin: 0; overflow: hidden; font-family: sans-serif; }
+      canvas { display: block; }
+      #controls {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background-color: rgba(0, 0, 0, 0.6);
+          padding: 10px;
+          border-radius: 5px;
+          display: flex;
+          gap: 10px; /* Spazio tra i bottoni */
+          flex-wrap: wrap; /* Per far andare a capo i bottoni se la finestra è stretta */
+      }
+      #controls button {
+          padding: 8px 15px;
+          background-color: #4CAF50; /* Colore verde */
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 1em;
+          transition: background-color 0.3s ease;
+      }
+      #controls button:hover {
+          background-color: #45a049;
+      }
+      #controls button:active {
+          background-color: #3e8e41;
+      }
+    </style>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@0.161/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/",
+          "rapier": "https://cdn.skypack.dev/@dimforge/rapier3d-compat"
+        }
+			}
+		</script>
+  </head>
+  <body>
+    <div id="controls">
+        <button id="idleBtn">Idle</button>
+        <button id="walkBtn">Walk</button>
+        <button id="deadBtn">Dead</button>
+        <button id="atk1Btn">Attack 1</button>
+        <button id="atk2Btn">Attack 2</button>
+        <button id="pauseBtn">Pausa/Riprendi</button>
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
